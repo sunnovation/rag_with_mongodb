@@ -1,0 +1,19 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://wikiuser:password@localhost:27017/admin
+      database: wiki
+  ai:
+    vectorstore:
+      mongodb:
+        collection-name: vector_store
+        initialize-schema: true
+        path-name: embedding
+        indexName: vector_index
+    ollama:
+      embedding:
+        options:
+          model: mistral
+      chat:
+        options:
+          model: mistral
